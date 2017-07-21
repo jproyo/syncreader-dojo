@@ -10,7 +10,30 @@ This is a syncrhonizer file reader demo app
 
 - The thread that manages numbers read the file each 2 sec. while the thread for strings every 1 sec.
 
-- The application shows the combination of the two files in a label
+- The application shows the combination of the two files in a label.
+
+### Notes
+
+*label* is going to be assumed as if both entries matching files should be grouped somehow. For example:
+
+- if file1 contains:
+
+    1
+    2
+    3
+
+- and file2 contains:
+
+    monday
+    tuesday
+    wedenesday
+
+- label should be in some Object container:
+
+        1 - monday
+        2 - tuesday
+        3 - wedenesday
+
 
 ## Prerequisites 
     - JDK 8

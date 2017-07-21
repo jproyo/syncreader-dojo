@@ -24,58 +24,43 @@ public class Label {
 	public static final String NA_LABEL = "NA";
 	
 	/** The key 1. */
-	private Integer number = -1;
+	private String first = NA_LABEL;
 	
 	/** The key 2. */
-	private String string;
+	private String second = NA_LABEL;
 	
 	/**
 	 * Instantiates a new label.
 	 *
-	 * @param number the number
-	 * @param string the string
+	 * @param first the first
+	 * @param second the second
 	 */
-	public Label(String number, String string) {
-		if(!NA_LABEL.equals(number)){
-			this.number = Integer.valueOf(number);
+	public Label(String first, String second) {
+		if(first != null){
+			this.first = first;
 		}
-		this.string = string;
+		if(second != null){
+			this.second = second;
+		}
 	}
-
+	
+	
 	/**
-	 * Gets the number.
+	 * Gets the first.
 	 *
-	 * @return the number
+	 * @return the first
 	 */
-	public Integer getNumber() {
-		return number;
+	public String getFirst() {
+		return first;
 	}
 	
 	/**
-	 * Sets the number.
+	 * Gets the second.
 	 *
-	 * @param number the new number
+	 * @return the second
 	 */
-	public void setNumber(Integer number) {
-		this.number = number;
-	}
-	
-	/**
-	 * Gets the string.
-	 *
-	 * @return the string
-	 */
-	public String getString() {
-		return string;
-	}
-	
-	/**
-	 * Sets the string.
-	 *
-	 * @param string the new string
-	 */
-	public void setString(String string) {
-		this.string = string;
+	public String getSecond() {
+		return second;
 	}
 	
 	
@@ -84,7 +69,7 @@ public class Label {
 	 */
 	@Override
 	public String toString() {
-		return String.format("[Number: %d - String: %s]", number, string);
+		return String.format("[First: %s - Second: %s]", first, second);
 	}
 
 	/* (non-Javadoc)
@@ -94,8 +79,8 @@ public class Label {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((number == null) ? 0 : number.hashCode());
-		result = prime * result + ((string == null) ? 0 : string.hashCode());
+		result = prime * result + ((first == null) ? 0 : first.hashCode());
+		result = prime * result + ((second == null) ? 0 : second.hashCode());
 		return result;
 	}
 
@@ -111,15 +96,15 @@ public class Label {
 		if (getClass() != obj.getClass())
 			return false;
 		Label other = (Label) obj;
-		if (number == null) {
-			if (other.number != null)
+		if (first == null) {
+			if (other.first != null)
 				return false;
-		} else if (!number.equals(other.number))
+		} else if (!first.equals(other.first))
 			return false;
-		if (string == null) {
-			if (other.string != null)
+		if (second == null) {
+			if (other.second != null)
 				return false;
-		} else if (!string.equals(other.string))
+		} else if (!second.equals(other.second))
 			return false;
 		return true;
 	}
