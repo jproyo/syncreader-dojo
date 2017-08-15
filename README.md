@@ -1,10 +1,10 @@
 # Syncreader demo
 
-[![Build Status](https://travis-ci.org/jproyo/syncreader.svg?branch=master)](https://travis-ci.org/jproyo/syncreader.svg?branch=master)
+[![Build Status](https://travis-ci.org/jproyo/syncreader-dojo.svg?branch=master)](https://travis-ci.org/jproyo/syncreader-dojo.svg?branch=master)
 
 This is a syncrhonizer file reader demo app
 
-## Requirements 
+## Requirements
 
 - It contains 2 threads and each of one read from a different text file. One text file contains a number (for instance 1, 2, 3, ... ) and the other file a string (for instance Monday, Tuesday, or whatever).
 
@@ -35,7 +35,7 @@ This is a syncrhonizer file reader demo app
         3 - wedenesday
 
 
-## Prerequisites 
+## Prerequisites
     - JDK 8
     - Maven 3.0.4 or newer
 
